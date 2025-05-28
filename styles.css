@@ -1,13 +1,22 @@
 body {
     display: flex;
-    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#gridSizeChangeBtn {
+    margin: 15px;
+    height: 40px;
+    width: 300px;
+    font-size: 20px;
+    font-weight: 700;
 }
 
 #container {
     display: flex;
     flex-flow: row wrap;
-    width: 98vh;
-    height: 98vh;
+    width: 90vh;
+    height: 90vh;
     align-content: stretch;
 }
 
@@ -19,5 +28,5 @@ body {
 }
 
 .hovered {
-    background-color: rgb(28, 28, 129);
+    background-color: navy;
 }
