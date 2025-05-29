@@ -24,11 +24,24 @@ function createGrid (size) {
         container.appendChild(square);
     }
     
+    let hoverCount;
     const squares = container.querySelectorAll("div");
     
     squares.forEach((square) => {
         square.addEventListener("mouseover", (event) => {
-            event.currentTarget.setAttribute("class", "hovered");
+            hoverCount = event.currentTarget.getAttribute("value");
+            if (!hoverCount) {
+                event.currentTarget.setAttribute("value", "1");
+            }
+            if (hoverCount<11) {
+                hoverCount++
+                event.currentTarget.setAttribute("value", hoverCount);
+            }
+            event.currentTarget.style.backgroundColor = "rgba("+randomColor()+","+randomColor()+","+randomColor()+","+hoverCount/10+")";
         });
     });
+}
+
+function randomColor() {
+    return Math.floor(Math.random() * 255);
 }

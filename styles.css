@@ -26,10 +26,4 @@ body {
     margin: 0;
     flex-grow: 1;
     flex-shrink: 1;
-    /* flex-basis: 6.25%; */
-    /* flex: 1 1 6.25%; */
-}
-
-.hovered {
-    background-color: navy;
 }
